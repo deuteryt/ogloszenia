@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Category;
+use Illuminate\Support\Str;
 
 class CategorySeeder extends Seeder
 {
@@ -24,6 +25,7 @@ class CategorySeeder extends Seeder
                 'slug' => Str::slug($category['name']),
                 'icon' => $category['icon'],
                 'sort_order' => $index,
+                'is_active' => true,
             ]);
         }
     }
